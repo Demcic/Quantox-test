@@ -11,9 +11,25 @@ class ComposerStaticInit6e561494676aa425281a961e5451c031
         'd383f1ec7b1e54a09cb53eb6fcf751e0' => __DIR__ . '/..' . '/thingengineer/mysqli-database-class/dbObject.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Source\\' => 7,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Source\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6e561494676aa425281a961e5451c031::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6e561494676aa425281a961e5451c031::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

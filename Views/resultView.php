@@ -1,3 +1,10 @@
+<?php if (isset($_SESSION['username'])): ?>
+	<div id="logoutDiv" style="width: 100%; float: right; display: inline-block;">
+		<form method="post" action="login">
+			<input type="submit" name="logoutBtn" value="Log out">
+		</form>
+	</div>
+<?php endif ?>
 <div style="width: 100%">
 	<div id="leftDiv" style="width: 50%; display: inline-block;">
 		<h2>List of all user types</h2>

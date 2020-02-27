@@ -1,5 +1,8 @@
 <?php
-$route['Quantox-test'] = "indexController";
+
+require 'src/routes.php';
+require "vendor/autoload.php";
+
 $defaultModel = "indexModel";
 
 // Check if path is available or not empty
@@ -7,6 +10,8 @@ $defaultModel = "indexModel";
 if(isset($_SERVER['REQUEST_URI']))
 {
 	$path= $_SERVER['REQUEST_URI'];
+	//var_dump($path);
+	//var_dump($_SERVER);
 	// Do a path split
 	$path_split = explode('/', ltrim($path));
 	//var_dump($path_split);

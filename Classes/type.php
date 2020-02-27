@@ -1,11 +1,16 @@
 <?php 
 
-public class Type {
-	var typeName;
-	var subTypes;
+//klasa za tipove
+class Type {
+	private $typeName;
+	private $subType;
 
-	public __construct() {
-		subTypes = array();
+	function __construct() {
+		$this->subType = array();
+	}
+
+	function setSubtype($subtype) {
+		$this->subType = $subtype;
 	}
 } 
 
