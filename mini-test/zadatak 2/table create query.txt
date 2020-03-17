@@ -1,0 +1,28 @@
+create table user_technologies (
+	id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    technologies_id int NOT NULL,
+    primary key(id),
+    foreign key(user_id) references users(id),
+    foreign key(technologies_id) references technologies(ID)
+);
+
+
+CREATE TABLE `technologies` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `trn_date` datetime NOT NULL,
+  `type` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
